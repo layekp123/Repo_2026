@@ -1,0 +1,665 @@
+Validation Logs:
+
+09:25:14 AM
+step
+Validation request received
+
+09:25:14 AM
+step
+Discovery phase started
+
+09:25:14 AM
+DiscoveryAgent
+Discovery agent started for hypothesis: Is metformin associated with reduced cancer mortality in diabetic patient?
+
+09:25:19 AM
+QueryConstructorAgent
+Building advanced queries
+
+09:25:26 AM
+QueryConstructorAgent
+Advanced query ready: {"query":"((\"metformin\"[MeSH Terms] OR \"metformin\"[All Fields]) AND (\"mTOR pathway\"[MeSH Terms] OR \"mTOR pathway\"[All Fields]) AND (\"AMPK\"[MeSH Terms] OR \"AMPK\"[All Fields]) AND (\"tumor cells\"[MeSH Terms] OR \"tumor cells\"[All Fields]))"}
+
+09:25:26 AM
+DiscoveryAgent
+Running discovery across data sources
+
+09:25:26 AM
+DiscoveryAgent
+Querying PubMedClient for related papers.
+
+09:25:31 AM
+DiscoveryAgent
+Fetching 5 articles from PubMedClient
+
+09:25:36 AM
+step
+Discovered 5 articles for sub-hypothesis: subHypothesisTitle='Metformin inhibits mTOR pathway activity in tumor cells through AMPK-dependent mechanisms' rationale='mTOR inhibition reduces protein synthesis and tumor growth; suppression of this pathway provides a plausible link between metformin use and decreased cancer aggressiveness.'
+
+09:25:36 AM
+DiscoveryAgent
+Discovery agent started for hypothesis: Is metformin associated with reduced cancer mortality in diabetic patient?
+
+09:25:40 AM
+QueryConstructorAgent
+Building advanced queries
+
+09:25:45 AM
+QueryConstructorAgent
+Advanced query ready: {"query":"((\"metformin\"[MeSH Terms] OR \"metformin\"[All Fields]) AND (\"diabetes mellitus\"[MeSH Terms] OR \"diabetic patients\"[All Fields]) AND (\"cancer mortality\"[MeSH Terms] OR \"cancer-specific mortality\"[All Fields])) AND (\"Clinical Trial\"[Publication Type] OR \"Randomized Controlled Trial\"[Publication Type])"}
+
+09:25:45 AM
+DiscoveryAgent
+Running discovery across data sources
+
+09:25:45 AM
+DiscoveryAgent
+Querying PubMedClient for related papers.
+
+09:25:49 AM
+DiscoveryAgent
+Fetching 5 articles from PubMedClient
+
+09:25:52 AM
+step
+Discovered 5 articles for sub-hypothesis: subHypothesisTitle='Diabetic patients with cancer who use metformin have lower cancer-specific mortality compared to diabetic patients not using metformin' rationale='This directly tests the primary hypothesis at the population level by comparing mortality outcomes between exposed and unexposed groups.'
+
+09:25:52 AM
+step
+Scoring phase started
+
+09:25:52 AM
+ScoringAgent
+Scoring 5 articles for Sub-Hypothesis : Metformin inhibits mTOR pathway activity in tumor cells through AMPK-dependent mechanisms
+
+09:25:52 AM
+ScoringAgent
+Scoring article 1/5: The effect of metformin exposure on colorectal cancer incidence according to tumor sidedness. <> PaperId: 41456465
+
+09:26:20 AM
+ScoringAgentFunction
+Quality: Study design - The study design has been evaluated as case-control study with a rigor score of 0.6. - Moderate design, compares past exposures between groups. <> PaperId: 41456465
+
+09:26:27 AM
+ScoringAgentFunction
+Quality: Sample Size - This study includes 3 participants. | score: 0.1 <> PaperId: 41456465
+
+09:26:27 AM
+ScoringAgentFunction
+Quality: Recency - this study was published 1 year(s) ago on 2025. | score: 0.9 <> PaperId: 41456465
+
+09:26:33 AM
+ScoringAgentFunction
+Citation data unavailable | score 0.0 <> PaperId: 41456465
+
+09:26:41 AM
+ScoringAgentFunction
+Quality score (design=0.60, sample=0.10, recency=0.90, citation=0.00): 0.44 <> PaperId: 41456465
+
+09:26:47 AM
+ScoringAgentFunction
+Relevance : This article has a relevance score of: 0.95 - High <> PaperId: 41456465
+
+09:26:53 AM
+ScoringAgentFunction
+Plausibility: This study has a plausibility score of 0.38 - Unclear, mechanism is not well defined but not contradictory. <> PaperId: 41456465
+
+09:27:00 AM
+ScoringAgentFunction
+Novelty: This study has a novelty score of 0.4 - Routine, confirms known findings in a different context or population. <> PaperId: 41456465
+
+09:27:03 AM
+ScoringAgentFunction
+Composite score (quality=0.44, relevance=0.95, plausibility=0.38, novelty=0.40): 0.55 <> PaperId: 41456465
+
+09:27:11 AM
+ScoringAgentFunction
+Final score: 0.55 <> PaperId: 41456465
+
+09:27:17 AM
+ScoringAgentFunction
+Generated grounded explanation <> PaperId: 41456465
+
+09:27:27 AM
+ScoringAgentFunction
+Generated quality explanation <> PaperId: 41456465
+
+09:27:31 AM
+ScoringAgentFunction
+Scoring finished <> PaperId: 41456465
+
+09:27:52 AM
+ScoringAgent
+Scoring article 1/5: The effect of metformin exposure on colorectal cancer incidence according to tumor sidedness. <> PaperId: 41456465
+
+09:28:12 AM
+ScoringAgentFunction
+Quality: Study design - The study design has been evaluated as case-control study with a rigor score of 0.6. - Moderate design, compares past exposures between groups. <> PaperId: 41456465
+
+09:28:20 AM
+ScoringAgentFunction
+Quality: Sample Size - This study includes 3 participants. | score: 0.1 <> PaperId: 41456465
+
+09:28:26 AM
+ScoringAgentFunction
+Quality: Recency - this study was published 1 year(s) ago on 2025. | score: 0.9 <> PaperId: 41456465
+
+09:28:26 AM
+ScoringAgentFunction
+Citation data unavailable | score 0.0 <> PaperId: 41456465
+
+09:28:32 AM
+ScoringAgentFunction
+Quality score (design=0.60, sample=0.10, recency=0.90, citation=0.00): 0.44 <> PaperId: 41456465
+
+09:28:42 AM
+ScoringAgentFunction
+Relevance : This article has a relevance score of: 0.95 - High <> PaperId: 41456465
+
+09:28:49 AM
+ScoringAgentFunction
+Plausibility: This study has a plausibility score of 0.35 - Unclear, mechanism is not well defined but not contradictory. <> PaperId: 41456465
+
+09:28:56 AM
+ScoringAgentFunction
+Novelty: This study has a novelty score of 0.45 - Routine, confirms known findings in a different context or population. <> PaperId: 41456465
+
+09:29:02 AM
+ScoringAgentFunction
+Composite score (quality=0.44, relevance=0.95, plausibility=0.35, novelty=0.45): 0.55 <> PaperId: 41456465
+
+09:29:06 AM
+ScoringAgentFunction
+Final score: 0.55 <> PaperId: 41456465
+
+09:29:12 AM
+ScoringAgentFunction
+Generated grounded explanation <> PaperId: 41456465
+
+09:29:17 AM
+ScoringAgentFunction
+Generated quality explanation <> PaperId: 41456465
+
+09:29:23 AM
+ScoringAgentFunction
+Scoring finished <> PaperId: 41456465
+
+09:25:52 AM
+ScoringAgent
+Scoring article 2/5: GLP- 1 Receptor Agonists in Patients with Cancer are Associated with Reduced All-Cause Mortality and Hospitalization. <> PaperId: 41482652
+
+09:26:05 AM
+ScoringAgentFunction
+Quality: Study design - The study design has been evaluated as cohort study with a rigor score of 0.7. - Strong design, tracks groups over time. <> PaperId: 41482652
+
+09:26:05 AM
+ScoringAgentFunction
+Quality: Sample Size - This study includes 1 participants. | score: 0.0 <> PaperId: 41482652
+
+09:26:06 AM
+ScoringAgentFunction
+Quality: Recency - this study was published this year. | score: 1.0 <> PaperId: 41482652
+
+09:26:06 AM
+ScoringAgentFunction
+Citation data unavailable | score 0.0 <> PaperId: 41482652
+
+09:26:06 AM
+ScoringAgentFunction
+Quality score (design=0.70, sample=0.00, recency=1.00, citation=0.00): 0.48 <> PaperId: 41482652
+
+09:26:07 AM
+ScoringAgentFunction
+Relevance : This article has a relevance score of: 0.93 - High <> PaperId: 41482652
+
+09:26:10 AM
+ScoringAgentFunction
+Plausibility: This study has a plausibility score of 0.3 - Questionable, some biological concerns about validity. <> PaperId: 41482652
+
+09:26:15 AM
+ScoringAgentFunction
+Novelty: This study has a novelty score of 0.33 - Routine, confirms known findings in a different context or population. <> PaperId: 41482652
+
+09:26:24 AM
+ScoringAgentFunction
+Composite score (quality=0.48, relevance=0.93, plausibility=0.30, novelty=0.33): 0.53 <> PaperId: 41482652
+
+09:26:27 AM
+ScoringAgentFunction
+Final score: 0.53 <> PaperId: 41482652
+
+09:26:33 AM
+ScoringAgentFunction
+Generated grounded explanation <> PaperId: 41482652
+
+09:26:37 AM
+ScoringAgentFunction
+Generated quality explanation <> PaperId: 41482652
+
+09:26:41 AM
+ScoringAgentFunction
+Scoring finished <> PaperId: 41482652
+
+09:27:52 AM
+ScoringAgent
+Scoring article 2/5: GLP- 1 Receptor Agonists in Patients with Cancer are Associated with Reduced All-Cause Mortality and Hospitalization. <> PaperId: 41482652
+
+09:28:06 AM
+ScoringAgentFunction
+Quality: Study design - The study design has been evaluated as cohort study with a rigor score of 0.7. - Strong design, tracks groups over time. <> PaperId: 41482652
+
+09:28:06 AM
+ScoringAgentFunction
+Quality: Sample Size - This study includes 1 participants. | score: 0.0 <> PaperId: 41482652
+
+09:28:06 AM
+ScoringAgentFunction
+Quality: Recency - this study was published this year. | score: 1.0 <> PaperId: 41482652
+
+09:28:06 AM
+ScoringAgentFunction
+Citation data unavailable | score 0.0 <> PaperId: 41482652
+
+09:28:07 AM
+ScoringAgentFunction
+Quality score (design=0.70, sample=0.00, recency=1.00, citation=0.00): 0.48 <> PaperId: 41482652
+
+09:28:10 AM
+ScoringAgentFunction
+Relevance : This article has a relevance score of: 0.93 - High <> PaperId: 41482652
+
+09:28:20 AM
+ScoringAgentFunction
+Plausibility: This study has a plausibility score of 0.3 - Questionable, some biological concerns about validity. <> PaperId: 41482652
+
+09:28:26 AM
+ScoringAgentFunction
+Novelty: This study has a novelty score of 0.3 - Incremental, minor variation on existing findings. <> PaperId: 41482652
+
+09:28:26 AM
+ScoringAgentFunction
+Composite score (quality=0.48, relevance=0.93, plausibility=0.30, novelty=0.30): 0.53 <> PaperId: 41482652
+
+09:28:32 AM
+ScoringAgentFunction
+Final score: 0.53 <> PaperId: 41482652
+
+09:28:41 AM
+ScoringAgentFunction
+Generated grounded explanation <> PaperId: 41482652
+
+09:28:46 AM
+ScoringAgentFunction
+Generated quality explanation <> PaperId: 41482652
+
+09:28:52 AM
+ScoringAgentFunction
+Scoring finished <> PaperId: 41482652
+
+09:25:52 AM
+ScoringAgent
+Scoring article 3/5: Synergistic associations of metformin and GLP-1 receptor agonist use with adiposity-related cancer incidence in people living with type 2 diabetes. <> PaperId: 41178701
+
+09:26:06 AM
+ScoringAgentFunction
+Quality: Study design - The study design has been evaluated as cohort study with a rigor score of 0.7. - Strong design, tracks groups over time. <> PaperId: 41178701
+
+09:26:06 AM
+ScoringAgentFunction
+Quality: Sample Size - This study includes 2 participants. | score: 0.06 <> PaperId: 41178701
+
+09:26:06 AM
+ScoringAgentFunction
+Quality: Recency - this study was published 1 year(s) ago on 2025. | score: 0.9 <> PaperId: 41178701
+
+09:26:06 AM
+ScoringAgentFunction
+Citation data unavailable | score 0.0 <> PaperId: 41178701
+
+09:26:07 AM
+ScoringAgentFunction
+Quality score (design=0.70, sample=0.06, recency=0.90, citation=0.00): 0.47 <> PaperId: 41178701
+
+09:26:11 AM
+ScoringAgentFunction
+Relevance : This article has a relevance score of: 0.95 - High <> PaperId: 41178701
+
+09:26:18 AM
+ScoringAgentFunction
+Plausibility: This study has a plausibility score of 0.8 - Very plausible, findings align perfectly with established biology. <> PaperId: 41178701
+
+09:26:27 AM
+ScoringAgentFunction
+Novelty: This study has a novelty score of 0.4 - Routine, confirms known findings in a different context or population. <> PaperId: 41178701
+
+09:26:27 AM
+ScoringAgentFunction
+Composite score (quality=0.47, relevance=0.95, plausibility=0.80, novelty=0.40): 0.65 <> PaperId: 41178701
+
+09:26:33 AM
+ScoringAgentFunction
+Final score: 0.65 <> PaperId: 41178701
+
+09:26:40 AM
+ScoringAgentFunction
+Generated grounded explanation <> PaperId: 41178701
+
+09:26:44 AM
+ScoringAgentFunction
+Generated quality explanation <> PaperId: 41178701
+
+09:26:47 AM
+ScoringAgentFunction
+Scoring finished <> PaperId: 41178701
+
+09:27:52 AM
+ScoringAgent
+Scoring article 3/5: Synergistic associations of metformin and GLP-1 receptor agonist use with adiposity-related cancer incidence in people living with type 2 diabetes. <> PaperId: 41178701
+
+09:28:04 AM
+ScoringAgentFunction
+Quality: Study design - The study design has been evaluated as cohort study with a rigor score of 0.7. - Strong design, tracks groups over time. <> PaperId: 41178701
+
+09:28:04 AM
+ScoringAgentFunction
+Quality: Sample Size - This study includes 2 participants. | score: 0.06 <> PaperId: 41178701
+
+09:28:06 AM
+ScoringAgentFunction
+Quality: Recency - this study was published 1 year(s) ago on 2025. | score: 0.9 <> PaperId: 41178701
+
+09:28:06 AM
+ScoringAgentFunction
+Citation data unavailable | score 0.0 <> PaperId: 41178701
+
+09:28:06 AM
+ScoringAgentFunction
+Quality score (design=0.70, sample=0.06, recency=0.90, citation=0.00): 0.47 <> PaperId: 41178701
+
+09:28:07 AM
+ScoringAgentFunction
+Relevance : This article has a relevance score of: 0.95 - High <> PaperId: 41178701
+
+09:28:09 AM
+ScoringAgentFunction
+Plausibility: This study has a plausibility score of 0.85 - Very plausible, findings align perfectly with established biology. <> PaperId: 41178701
+
+09:28:17 AM
+ScoringAgentFunction
+Novelty: This study has a novelty score of 0.4 - Routine, confirms known findings in a different context or population. <> PaperId: 41178701
+
+09:28:23 AM
+ScoringAgentFunction
+Composite score (quality=0.47, relevance=0.95, plausibility=0.85, novelty=0.40): 0.66 <> PaperId: 41178701
+
+09:28:26 AM
+ScoringAgentFunction
+Final score: 0.66 <> PaperId: 41178701
+
+09:28:32 AM
+ScoringAgentFunction
+Generated grounded explanation <> PaperId: 41178701
+
+09:28:35 AM
+ScoringAgentFunction
+Generated quality explanation <> PaperId: 41178701
+
+09:28:42 AM
+ScoringAgentFunction
+Scoring finished <> PaperId: 41178701
+
+09:25:52 AM
+ScoringAgent
+Scoring article 4/5: Effects of Metformin on Survival and Toxicity in Patients with Metastatic Non-Small Cell Lung Cancer Treated with Nivolumab. <> PaperId: 40731791
+
+09:26:24 AM
+ScoringAgentFunction
+Quality: Study design - The study design has been evaluated as cohort study with a rigor score of 0.7. - Strong design, tracks groups over time. <> PaperId: 40731791
+
+09:26:27 AM
+ScoringAgentFunction
+Sample size data unavailable | score 0.0 <> PaperId: 40731791
+
+09:26:27 AM
+ScoringAgentFunction
+Quality: Recency - this study was published 1 year(s) ago on 2025. | score: 0.9 <> PaperId: 40731791
+
+09:26:33 AM
+ScoringAgentFunction
+Citation data unavailable | score 0.0 <> PaperId: 40731791
+
+09:26:41 AM
+ScoringAgentFunction
+Quality score (design=0.70, sample=0.00, recency=0.90, citation=0.00): 0.46 <> PaperId: 40731791
+
+09:26:47 AM
+ScoringAgentFunction
+Relevance : This article has a relevance score of: 0.94 - High <> PaperId: 40731791
+
+09:26:57 AM
+ScoringAgentFunction
+Plausibility: This study has a plausibility score of 0.3 - Questionable, some biological concerns about validity. <> PaperId: 40731791
+
+09:27:03 AM
+ScoringAgentFunction
+Novelty: This study has a novelty score of 0.3 - Incremental, minor variation on existing findings. <> PaperId: 40731791
+
+09:27:03 AM
+ScoringAgentFunction
+Composite score (quality=0.46, relevance=0.94, plausibility=0.30, novelty=0.30): 0.52 <> PaperId: 40731791
+
+09:27:11 AM
+ScoringAgentFunction
+Final score: 0.52 <> PaperId: 40731791
+
+09:27:23 AM
+ScoringAgentFunction
+Generated grounded explanation <> PaperId: 40731791
+
+09:27:31 AM
+ScoringAgentFunction
+Generated quality explanation <> PaperId: 40731791
+
+09:27:31 AM
+ScoringAgentFunction
+Scoring finished <> PaperId: 40731791
+
+09:27:52 AM
+ScoringAgent
+Scoring article 4/5: Effects of Metformin on Survival and Toxicity in Patients with Metastatic Non-Small Cell Lung Cancer Treated with Nivolumab. <> PaperId: 40731791
+
+09:28:23 AM
+ScoringAgentFunction
+Quality: Study design - The study design has been evaluated as cohort study with a rigor score of 0.7. - Strong design, tracks groups over time. <> PaperId: 40731791
+
+09:28:26 AM
+ScoringAgentFunction
+Sample size data unavailable | score 0.0 <> PaperId: 40731791
+
+09:28:26 AM
+ScoringAgentFunction
+Quality: Recency - this study was published 1 year(s) ago on 2025. | score: 0.9 <> PaperId: 40731791
+
+09:28:32 AM
+ScoringAgentFunction
+Citation data unavailable | score 0.0 <> PaperId: 40731791
+
+09:28:42 AM
+ScoringAgentFunction
+Quality score (design=0.70, sample=0.00, recency=0.90, citation=0.00): 0.46 <> PaperId: 40731791
+
+09:28:52 AM
+ScoringAgentFunction
+Relevance : This article has a relevance score of: 0.94 - High <> PaperId: 40731791
+
+09:29:02 AM
+ScoringAgentFunction
+Plausibility: This study has a plausibility score of 0.3 - Questionable, some biological concerns about validity. <> PaperId: 40731791
+
+09:29:06 AM
+ScoringAgentFunction
+Novelty: This study has a novelty score of 0.3 - Incremental, minor variation on existing findings. <> PaperId: 40731791
+
+09:29:06 AM
+ScoringAgentFunction
+Composite score (quality=0.46, relevance=0.94, plausibility=0.30, novelty=0.30): 0.52 <> PaperId: 40731791
+
+09:29:14 AM
+ScoringAgentFunction
+Final score: 0.52 <> PaperId: 40731791
+
+09:29:23 AM
+ScoringAgentFunction
+Generated grounded explanation <> PaperId: 40731791
+
+09:29:28 AM
+ScoringAgentFunction
+Generated quality explanation <> PaperId: 40731791
+
+09:29:28 AM
+ScoringAgentFunction
+Scoring finished <> PaperId: 40731791
+
+09:25:52 AM
+ScoringAgent
+Scoring article 5/5: The impact of metformin use on survival outcomes in colorectal cancer: A systematic review and meta-analysis. <> PaperId: 41496261
+
+09:26:12 AM
+ScoringAgentFunction
+Quality: Study design - The study design has been evaluated as meta-analysis with a rigor score of 1.0. - Highest rigor, combines results from multiple studies. <> PaperId: 41496261
+
+09:26:18 AM
+ScoringAgentFunction
+Quality: Sample Size - This study includes 31 participants. | score: 0.3 <> PaperId: 41496261
+
+09:26:27 AM
+ScoringAgentFunction
+Quality: Recency - this study was published 1 year(s) ago on 2025. | score: 0.9 <> PaperId: 41496261
+
+09:26:27 AM
+ScoringAgentFunction
+Citation data unavailable | score 0.0 <> PaperId: 41496261
+
+09:26:33 AM
+ScoringAgentFunction
+Quality score (design=1.00, sample=0.30, recency=0.90, citation=0.00): 0.64 <> PaperId: 41496261
+
+09:26:41 AM
+ScoringAgentFunction
+Relevance : This article has a relevance score of: 0.95 - High <> PaperId: 41496261
+
+09:26:46 AM
+ScoringAgentFunction
+Plausibility: This study has a plausibility score of 0.9 - Very plausible, findings align perfectly with established biology. <> PaperId: 41496261
+
+09:26:50 AM
+ScoringAgentFunction
+Novelty: This study has a novelty score of 0.38 - Routine, confirms known findings in a different context or population. <> PaperId: 41496261
+
+09:26:57 AM
+ScoringAgentFunction
+Composite score (quality=0.64, relevance=0.95, plausibility=0.90, novelty=0.38): 0.73 <> PaperId: 41496261
+
+09:27:03 AM
+ScoringAgentFunction
+Final score: 0.73 <> PaperId: 41496261
+
+09:27:11 AM
+ScoringAgentFunction
+Generated grounded explanation <> PaperId: 41496261
+
+09:27:14 AM
+ScoringAgentFunction
+Generated quality explanation <> PaperId: 41496261
+
+09:27:23 AM
+ScoringAgentFunction
+Scoring finished <> PaperId: 41496261
+
+09:27:52 AM
+ScoringAgent
+Scoring article 5/5: The impact of metformin use on survival outcomes in colorectal cancer: A systematic review and meta-analysis. <> PaperId: 41496261
+
+09:28:13 AM
+ScoringAgentFunction
+Quality: Study design - The study design has been evaluated as meta-analysis with a rigor score of 1.0. - Highest rigor, combines results from multiple studies. <> PaperId: 41496261
+
+09:28:20 AM
+ScoringAgentFunction
+Quality: Sample Size - This study includes 31 participants. | score: 0.3 <> PaperId: 41496261
+
+09:28:26 AM
+ScoringAgentFunction
+Quality: Recency - this study was published 1 year(s) ago on 2025. | score: 0.9 <> PaperId: 41496261
+
+09:28:26 AM
+ScoringAgentFunction
+Citation data unavailable | score 0.0 <> PaperId: 41496261
+
+09:28:32 AM
+ScoringAgentFunction
+Quality score (design=1.00, sample=0.30, recency=0.90, citation=0.00): 0.64 <> PaperId: 41496261
+
+09:28:42 AM
+ScoringAgentFunction
+Relevance : This article has a relevance score of: 0.95 - High <> PaperId: 41496261
+
+09:28:52 AM
+ScoringAgentFunction
+Plausibility: This study has a plausibility score of 0.9 - Very plausible, findings align perfectly with established biology. <> PaperId: 41496261
+
+09:28:59 AM
+ScoringAgentFunction
+Novelty: This study has a novelty score of 0.4 - Routine, confirms known findings in a different context or population. <> PaperId: 41496261
+
+09:29:02 AM
+ScoringAgentFunction
+Composite score (quality=0.64, relevance=0.95, plausibility=0.90, novelty=0.40): 0.73 <> PaperId: 41496261
+
+09:29:06 AM
+ScoringAgentFunction
+Final score: 0.73 <> PaperId: 41496261
+
+09:29:14 AM
+ScoringAgentFunction
+Generated grounded explanation <> PaperId: 41496261
+
+09:29:20 AM
+ScoringAgentFunction
+Generated quality explanation <> PaperId: 41496261
+
+09:29:23 AM
+ScoringAgentFunction
+Scoring finished <> PaperId: 41496261
+
+09:27:39 AM
+ScoringAgent
+Scoring complete for Sub-Hypothesis : Metformin inhibits mTOR pathway activity in tumor cells through AMPK-dependent mechanisms
+
+09:27:39 AM
+step
+Scored 5 article for sub-hypothesis: Metformin inhibits mTOR pathway activity in tumor cells through AMPK-dependent mechanisms
+
+09:27:52 AM
+ScoringAgent
+Scoring 5 articles for Sub-Hypothesis : Diabetic patients with cancer who use metformin have lower cancer-specific mortality compared to diabetic patients not using metformin
+
+09:29:39 AM
+ScoringAgent
+Scoring complete for Sub-Hypothesis : Diabetic patients with cancer who use metformin have lower cancer-specific mortality compared to diabetic patients not using metformin
+
+09:29:39 AM
+step
+Scored 5 article for sub-hypothesis: Diabetic patients with cancer who use metformin have lower cancer-specific mortality compared to diabetic patients not using metformin
+
+09:29:43 AM
+step
+Scoring phase finished
+
+09:29:43 AM
+step
+Validation pipeline complete
+
+09:29:43 AM
+complete
+Process finished.
