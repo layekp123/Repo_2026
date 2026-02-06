@@ -1,0 +1,46 @@
+Financial Spreading – Recommended Extraction Approach
+Hybrid Extraction Model (Accuracy + Efficiency)
+
+1. Structural Parsing (Foundation)
+
+Parse annual report into financial statements, notes, and tables
+
+Preserve page numbers, table boundaries, and units
+
+Create structure-aware chunks (not raw text)
+
+2. RAG for Intelligent Localization
+
+Retrieve only relevant sections:
+
+Balance Sheet, P&L, Cash Flow
+
+Key Notes (Debt, Revenue, PPE, Contingencies, Segments)
+
+Exclude narrative-heavy sections (MD&A, governance)
+
+3. Targeted Structured / Sequential Extraction
+
+Perform sequential extraction only within retrieved tables/notes
+
+Apply predefined spreading schema
+
+Normalize units and reporting periods
+
+4. Validation & Controls
+
+Accounting checks (Assets = Liabilities + Equity)
+
+Cash flow consistency checks
+
+Cross-note reconciliation
+
+Page-level traceability for audit
+
+Outcome
+
+Higher accuracy than pure RAG
+
+Lower cost than full-document sequential extraction
+
+Scalable across issuers, formats, and accounting standards

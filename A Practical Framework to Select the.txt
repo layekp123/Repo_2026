@@ -1,0 +1,70 @@
+A Practical Framework to Select the Right LLM
+1. Decompose the Use Case
+
+Identify the capabilities required, not just the task.
+
+Retrieval grounding (RAG)
+
+Structured extraction (tables / fields)
+
+Transformation & normalization
+
+Reasoning & validation
+
+Text generation
+
+Most enterprise use cases require multiple capabilities → multiple models
+
+2. Define Failure Tolerance (Critical)
+
+Be explicit about how the system is allowed to fail.
+
+Hallucination tolerance (none / low / acceptable)
+
+Missing data tolerance
+
+Consistency across runs required?
+
+Can errors be detected downstream?
+
+3. Apply Hard Constraints Early
+
+Non-negotiables that gate model choice:
+
+Data residency & compliance
+
+Cost ceilings at scale
+
+Latency class (real-time vs batch)
+
+Vendor risk & lock-in posture
+
+Auditability & explainability
+
+4. Shortlist by Capability Fit
+
+Select models based on what they do well:
+
+Schema reliability & structured outputs
+
+Table and numeric robustness
+
+Long-context stability
+
+Reasoning consistency
+
+Predictable cost behavior
+
+5. Benchmark on Your Use Case
+
+Evaluate shortlisted models using use-case-specific metrics:
+
+Schema compliance rate
+
+Numeric accuracy
+
+Missing-field frequency
+
+Citation correctness (for RAG)
+
+Output consistency across reruns
