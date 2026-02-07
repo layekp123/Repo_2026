@@ -1,0 +1,51 @@
+Supervised Finetuning
+
+1. Dataset Construction:
+   Convert manual correction into input data for fine tuning
+2. Negative Examples:
+    Include examples where the answer is not in the text.
+
+json
+{
+  "instruction": "Extract Total Debt. Include short-term and long-term interest-bearing liabilities.",
+  "context": "[PDF Table Snippet showing Revolver, Term Loan, and Accounts Payable]",
+  "correction_logic": "Excluded Accounts Payable as it is an operating liability, not debt.",
+  "expected_output": "{\"total_debt\": 1500000, \"currency\": \"USD\"}"
+}
+
+Using correction logic—often referred to as Chain-of-Thought (CoT) fine-tuning—transforms the LLM from a simple "lookup" tool into a "reasoning" engine for financial data. In financial spreading, where numbers like "Total Debt" must be derived from multiple line items, the difference in accuracy and auditability is significant
+
+"Prompt" Based Critic Model
+------------------------
+
+A Critic provides a second "pair of eyes" to catch those confident lies.
+Past Correction can be used to build rules and used in prompt. No Training / Fine tuning is needed.
+
+Correction Example 1: "Analyst corrected extraction because the model picked the 'Consolidated' figure instead of 'Parent Company'."
+Critic's New Rule: "Always check if the value belongs to the 'Parent' or 'Consolidated' entity. If the RAG picks 'Consolidated' when 'Parent' is requested, flag as High Risk."
+
+----------------------
+Summary Comparison
+Strategy	Effort	Latency	Accuracy Gain
+Few-Shot (Library)	Low	High (more tokens)	Immediate
+Fine-Tuning	High	Low	High (on specific patterns)
+
+
+--------------------
+
+Slide Title: Agentic AI: The "Self-Correcting" Engine for Financial Spreading
+1. The Core Architecture (The "Team" Approach)
+The Planner: Decomposes complex spreading (e.g., EBITDA) into a multi-step audit mission.
+The Footnote Tracker: Navigates from Balance Sheet line items to "Notes to the Financial Statements."
+The Code Interpreter: Offloads all arithmetic to a Python Sandbox for 100% math accuracy.
+The Expert Guardrail: Uses your Past Manual Corrections as a live rulebook to prevent repeat errors.
+2. Deep-Dive Case Study: Calculating "Adjusted Net Debt"
+Extraction Step	Standard RAG (Librarian)	Agentic AI (Senior Associate)
+Search Strategy	Reads only the "Debt" row on Pg 4.	Follows "Note 12" pointer to Pg 65 details.
+Financial Logic	Picks the first Cash figure found.	Checks Footnotes to exclude Restricted Cash.
+Calculation	LLM "predicts" the final sum.	Python Tool sums 8+ sub-items with zero error.
+Final Output	$800M (Incomplete)	$865M (Fully Reconciled & Audited)
+3. The Value Proposition (ROI for 2026)
+Zero-Hallucination Math: Arithmetic is calculated by code, not predicted by text.
+Audit-Ready Trace: Every cell includes a "Reasoning Path" (e.g., "Value = Pg 4 [LT Debt] + Pg 65 [Pension Deficit] - Pg 5 [Cash]").
+Efficiency: Analysts move from "Data Entry" to "Data Review," reducing manual workload by ~85%.
