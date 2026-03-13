@@ -1,0 +1,115 @@
+What can I do with copilot studio that I can not do in azure ai foundry
+While Azure AI Foundry is a platform-as-a-service (PaaS) focused on building, testing, and deploying custom AI models and search indexes, Copilot Studio is a software-as-a-service (SaaS) platform designed for building end-user applications quickly. Here is what you can do in Copilot Studio that is more challenging or requires significant custom engineering in Foundry:
+
+No-Code/Low-Code Interface (4:40): Copilot Studio offers a visual, graphical interface for building conversation flows, testing, and deploying, whereas Foundry is code-first and requires developer skills.
+Rapid Deployment & SaaS Features (2:54): You can build, secure, and deploy an agent to production almost immediately within the Copilot Studio console without managing underlying infrastructure.
+Native M365 Integration (4:11): Copilot Studio allows seamless, out-of-the-box integration with Microsoft 365 data and services, enabling agents to act on behalf of users in Teams, Outlook, and SharePoint.
+Built-in Conversation Management (3:02): It handles conversational state, user authentication, and multi-turn dialogues natively, which must be manually coded if using Foundry directly.
+
+
+
+What can i do in azure ai foundry that can not be done on copilot studio
+While Copilot Studio excels at rapid, low-code agent deployment, Azure AI Foundry is a PaaS designed for advanced developers who need complete control over the technical infrastructure. Here are the main things you can do in Foundry that cannot be done in Copilot Studio:
+
+Low-Level Technical Configuration (8:00): You can fine-tune specific RAG parameters such as the embedding model, chunk size, and chunk overlap in Azure AI Search for highly specialized document parsing.
+Full Model Choice and Fine-tuning (15:00): Foundry allows you to access, deploy, and fine-tune models from the entire Azure AI model catalog (over 1,900 models), including open-source models like Llama or Mistral.
+Infrastructure Management (15:20): You must manage the GPU infrastructure and cost optimization for your models directly, giving you flexibility over performance and latency that is abstracted away in Copilot Studio.
+Complex Architectural Control (33:00): For advanced, pro-code scenarios, Foundry enables building custom orchestration, managing complex conversation states, and using the Azure AI Agent Service for precise control over tool discovery and agent behavior.
+
+
+A customer is new to Azure AI..Guide the customer when to choose copilot studio and when to go for azure ai foundry
+For customers new to Azure AI, choosing between Copilot Studio and Azure AI Foundry depends on whether you need rapid application development or deep technical control. Here is a guide to help you decide:
+
+Choose Copilot Studio if:
+Speed is priority: You need to build and deploy an agent quickly using a low-code/no-code graphical interface (2:54).
+You need integration: You want native, out-of-the-box connectivity with Microsoft 365 data like Teams, Outlook, and SharePoint (4:11).
+You want a SaaS solution: You prefer a service where Microsoft manages the underlying infrastructure, security, and compliance (2:54).
+Choose Azure AI Foundry if:
+You need deep control: You require precise technical configurations, such as tuning embedding models, adjusting chunk sizes, or managing parsing logic (8:00).
+You want model flexibility: You need to choose from over 1,900 models, including open-source options like Llama or Mistral, or you want to fine-tune models on your own data (15:00).
+You are building a custom PaaS app: You are a developer creating a highly customized application and need to manage the GPU infrastructure and API connections directly (15:20).
+Best of both worlds: You can build advanced AI features in Foundry (like a custom search index) and then easily link them into Copilot Studio to create a powerful, user-friendly agent (2:00).
+
+
+
+If I need to connect to Microsoft 365 data from Azure AI foundry then what are my options
+When working directly in Azure AI Foundry, connecting to Microsoft 365 data requires a more technical, code-first approach compared to the low-code environment of Copilot Studio.
+
+Here are your main options for bringing M365 data into Foundry:
+
+Azure AI Search Indexers (33:00): You can use Azure AI Search to ingest data directly from SharePoint or OneDrive. This allows you to create a vectorized index of your files, making them searchable for RAG applications.
+Microsoft Graph API (41:00): For custom, pro-code solutions, you can write code using the Microsoft Graph API to query M365 data (emails, chats, calendar, files) and ingest it into your Foundry workflows.
+Azure AI Agent Service (45:00): If building custom agents within Foundry, you can use the Azure AI Agent Service along with code to programmatically access M365 data and tools.
+
+
+Give me scenarios which you can only do in copilot studio and not in azure ai foundry?
+Based on the video, Copilot Studio is designed as a SaaS platform for rapid development and deployment, particularly within the Microsoft ecosystem. Here are scenarios you can achieve in Copilot Studio that are difficult or impossible in Azure AI Foundry without significant custom engineering:
+
+Building a No-Code IT Bot in Minutes (6:54): You can use the visual GUI to ingest documentation, configure search, and test functionality within a single interface, making it ideal for citizen developers (8:38).
+Native Microsoft 365 Integration (2:54): Deploying an agent that automatically acts on behalf of a user within Teams, Outlook, or SharePoint without manually coding authentication or API connections (4:11).
+Rapid Production Deployment (3:02): Moving an agent from creation to production securely and immediately within the SaaS console, leveraging Microsoft’s managed infrastructure (3:02).
+
+
+Based on the session, Azure AI Foundry is a PaaS designed for advanced control and customization, which allows you to perform scenarios that are not available in the low-code environment of Copilot Studio. Here are specific scenarios you can only do in Foundry:
+
+Fine-tuning and Selecting Specialized Models (15:00): You can select from over 1,900 models in the Azure AI model catalog, including open-source options like Mistral or Llama, and fine-tune them on your own business data.
+Low-Level RAG Configuration (8:00): You have precise technical control over how data is ingested and searched, such as selecting specific embedding models, adjusting chunk sizes, and defining how text is parsed from PDFs or images for highly optimized search results.
+Pro-Code Architectural Control (15:20): Foundry allows developers to build complex, custom orchestration, manage conversation state manually, and utilize the Azure AI Agent Service for granular control over tool discovery and agent behavior.
+
+
+Can I fine tune model in azure ai foundry and use in copilot studio?
+Yes, you absolutely can fine-tune a model in Azure AI Foundry and subsequently use it within Copilot Studio (15:00-15:47).
+
+Here is the workflow discussed in the video:
+
+Fine-tune in Foundry: You use Azure AI Foundry to train a model on your specific business data and deploy it (18:59).
+Get Credentials: In Foundry, you copy the Target URI, API Key, and Deployment Name for your customized model (19:03).
+Connect to Copilot Studio: In Copilot Studio, you select the option to connect a model from Azure Foundry in the generative AI settings and paste those credentials to begin using your specialized model for response generation (18:44-19:13).
+
+
+Can I do low level RAG configuration like selecting specific embedding models, adjusting chunk sizes, and defining how text is parsed from PDFs or images in azure ai foundry and use that in copilot studio?
+Yes, you absolutely can perform that level of detailed RAG (Retrieval-Augmented Generation) configuration in Azure AI Foundry and use it within Copilot Studio (2:00, 8:00). Foundry acts as the technical foundation for your custom AI components, while Copilot Studio allows you to integrate them into a user-friendly conversational interface (6:54).
+
+Here is how you achieve the specific configurations mentioned:
+
+Selecting Embedding Models: In Foundry, you can choose which models to use for generating vector embeddings (e.g., text-embedding-3-large), which allows you to optimize for performance or cost (11:02).
+Adjusting Chunk Sizes: When creating a vectorized index in Foundry, you have control over how documents are broken down into chunks for better retrieval accuracy (8:00).
+Parsing PDFs and Images: You can define how text and images are extracted from your documents, including using multimodal models like GPT-4o to interpret complicated diagrams or tables (10:52).
+Once you have created this specialized index in Azure AI Foundry, you can link it directly to your agent in Copilot Studio (12:05).
+
+
+
+Now help me with a comprehensive selection approach between copilot studio and azure ai foundry? Start with selectio criteria
+Based on the session, here is a comprehensive approach for selecting between Copilot Studio and Azure AI Foundry, starting with the key criteria derived from the speakers' discussions.
+
+Selection Criteria
+Development Experience & Skill Set (3:53): Do you have citizen developers looking for low-code tools, or are you utilizing professional developers (pro-coders) proficient in Python or C#?
+Level of Control & Customization (8:04): Does your scenario require granular control over model parameters, embedding strategies, chunking, or custom indexing?
+Integration & Deployment Speed (2:52): Is your priority rapid, secure deployment within a SaaS environment, or a highly customized PaaS architectural design?
+Security & Compliance Requirements (4:17): Do you need to adhere to specific infrastructure security constraints, such as V-Net subnet injection?
+Model Selection & Training (15:00): Do you need access to the entire Azure AI model catalog (1900+ models) and the ability to fine-tune them on your own data?
+Decision Framework
+Feature	Copilot Studio	Azure AI Foundry
+Primary User	Citizen Developers / Business Users	Professional AI Developers / Data Scientists
+Development Type	Low-Code / No-Code (6:54)	Pro-Code / SDK-First (34:07)
+Deployment	SaaS (Secure & Immediate) (2:54)	PaaS (Highly Configurable) (4:13)
+RAG Control	High-level (SharePoint/Dynamics) (7:14)	Low-level (Vector Indexes/Embeddings) (8:00)
+Model Access	Managed Models	Full Catalog (1900+ Models) (15:00)
+Authentication	Built-in (OBO Token) (43:10)	Custom (MCP/Graph API) (33:04)
+Recommendation
+Choose Copilot Studio if: You need to build a secure, scalable IT support agent rapidly using existing Microsoft 365 data, leveraging a low-code approach, and utilizing managed infrastructure (6:54).
+Choose Azure AI Foundry if: You need precise control over the RAG pipeline (e.g., custom parsing of markdown/images), require specialized models (e.g., fine-tuned Mistral), or have strict architectural requirements like V-Net injection (8:00, 15:00).
+
+
+
+
+How is tool discovery handled by Copilot Studio?
+The video highlights a clear distinction in how Copilot Studio and Azure AI Foundry handle tool discovery and agent behavior, ranging from low-code simplicity to pro-code granular control.
+
+Copilot Studio (Low-Code/SaaS): Handles tool discovery primarily through automated integration and a graphical user interface. You can easily add pre-built connectors or use Model Context Protocol (MCP) to discover and integrate tools without writing deep orchestrations (33:05). The platform manages the underlying connectivity, making it ideal for rapid deployment.
+Azure AI Foundry (Pro-Code/PaaS): Offers granular control through the Azure AI Agent Service. Developers can programmatically define tool discovery, explicitly tell the agent when to use specific tools, and tightly manage conversation state and behavior through code (42:04, 51:01). This allows for complex, customized orchestration scenarios that citizen developers cannot configure in Copilot Studio.
+
+
+
+
+
